@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Important attribute for the forms</h3>
+        <p>name | action | enctype | method | novalidate</p>
+
+        <form action="" method="POST" enctype="multipart/form-data"> <!-- novalidate is used to bypass html5 validation-->
+            <label>Username:
+                <input name="username" type="text" value="xyz" />
+            </label>
+            <input type="password" name="password" />
+            Banana: <input type="radio" name="fruit" value="banana" />
+
+            <input type="file" accept=".js"/>
+            <button>Submit</button>
+            <input type="button" value="Submit" />
+
+            <h3>FieldSet</h3>
+            
+                <label>Name<input type="text" /></label>
+                <label>Email<input type="email" /></label> <!-- pattern attribute can add regex-->
+            <fieldset>
+                <legend>Address</legend>
+                <label>House no.<br /><input type="text"/></label>
+                <label>Street<br /><input type="text"/></label>
+                <label>Pincode<br /><input type="text"/></label>
+    
+            </fieldset>
+
+            <input type="color" name="color">
+            <input type="date">
+            <input type="datetime-local">
+            
+            <!-- if the person can't see  -->
+            <input type="hidden">
+            <input type="range" value="90" max="95">
+            <!-- <input type="tel"> on mobiles it will open numeric keypad -->
+            <input type="time">
+            <input type="url">
+
+            <h1>Meter</h1>
+            <meter 
+                id="fuel"
+                min="0"
+                max="100"
+                low="33"
+                high="66"
+                optimum="80"
+                value="90"
+            ></meter>
+            <progress value="50" max="100"></progress>
+        </form>
+    </body>
+</html>
