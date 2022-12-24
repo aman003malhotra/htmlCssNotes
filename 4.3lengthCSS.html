@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <style>
+    
+        </style>
+    </head>
+    <body>
+        <div id = "app">
+            <h1>Length of CSS</h1>
+            <h2>The Absolute Lengths</h2>
+            <div class="inner">
+                <h3>px</h3><br>
+                <ul>
+                    <li>Pixels are perhaps best thought of as "device pixels" as this lenghts doesn't have to do anything</li>
+                    <li>with the literal screen pixels in the display you are looking at</li>
+                    <li>it's actually an angular measurement</li>
+                </ul>
+
+                <h3>in</h3>
+                <ul>
+                    <li>inches are a physical measurement but in CSS land, they just map directly to pixels</li>
+                </ul>
+
+                <h3>cm & mm </h3>
+                <ul>
+                    <li>1 cm == 37.8 px</li>
+                    <li>1 mm == 0.1 cm == 3.78 px</li>
+                </ul>
+
+                <h2>The font-realtive length </h2>
+                <h3>em & rem</h3>
+                <ul>
+                    <li> a relative unit </li>
+                    <li>1 em == parent font size == 16px </li>
+                    <li>1.2 em == 120 % parent font size</li>
+                    <li>Although the length doesn't chnage when you change font-family, it does change when you change with font-size</li>
+                </ul>
+
+                <h3>Percentage</h3>
+                <ul>
+                    <li> a length set in percentage is based on the length of same property of the parent element </li>
+                    <li>for example, if an element renders at 450 px width, a child element with a width set to 50% ie 225px </li>
+                    <li>1.2 em == 120 % parent font size</li>
+                </ul>
+
+                <h3>ViewPort Width</h3>
+                <ul>
+                    <li> 1 vw = 1% of the width of viewport </li>
+                    <li>It is similar to percentage, except that the value remains consistent for all elements regardless of their parent elements or parent elements width </li>
+                    <li>A bit like how rem units are always relative to the root</li>
+                </ul>
+
+                <h3>ViewPort Height</h3>
+                <ul>
+                    <li> 1 vw = 1% of the height of viewport </li>
+                    <li>It is similar to percentage, except that the value remains consistent for all elements regardless of their parent elements or parent elements width </li>
+                    <li>A bit like how rem units are always relative to the root</li>
+                </ul>
+
+                <h3>Vmin & Vmax</h3>
+                <ul>
+                    <li>this value will be whichever is smaller at the moment, vw or vh</li>
+                    <li>In the standard use case of sizing type, this may be a more useful metric than vw or vh on their own in determining true screen size</li>
+                    <li>Vmax value is whichever is the larger at the moment, vw or vh</li>
+                </ul>
+            </div>
+            
+        </div>
+    </body>
+</html>

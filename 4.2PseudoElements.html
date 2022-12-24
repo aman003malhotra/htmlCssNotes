@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <style>
+            *{
+                /* background-color:red; */
+                margin:0;
+                padding:0;
+            }
+            h1, a{
+                background-color: lightcyan;
+            }
+            div.inner {
+                background-color: aquamarine;
+            }
+            /* has to be unique for a particular page */
+            #app{
+                background-color: blueviolet;
+            }
+            /* children selector */
+            div > h1{
+                color:red;
+            }
+            /* not exactly the immediate child */
+            div h1{
+                border:2px solid chartreuse;
+            }
+
+            /* adjacent sibling selector - the adjacent sibling combinator separates two selectors 
+            and matches the second element only if it immediately follows the first element, and 
+            both are children of the same parent element
+            */
+            h1 + p{
+                padding:20px;
+            }
+
+            /* general sibling selector - macthes an element that is a sibling of another, although it 
+            does not have to be directly preceding element*/
+            h1~p{
+                font-size:20px;
+            }
+
+            /* a pseudo-class is used to define a special state of an element */
+            /* selector:pseudo-class{
+                property:value
+            } */
+            input:hover {
+                background-color:blue;
+            }
+            input:active {
+                background-color:chocolate;
+            }
+            input.text:focus{
+                background-color: #665546;;
+            }
+
+            a:link{
+                color:black
+            }
+
+            a:visited{
+                color:greenyellow;
+            }
+            a:hover{
+                color:seagreen;
+            }
+            a:active{
+                color:olivedrab;
+            }
+
+            /* :first-child
+            :nth-child()
+            :nth-last-child()
+            :nth-of-type()
+            :nth-last-of-type()
+            :last-child
+            :first-of-type
+            :last-of-type
+            :only-child
+            :only-of-type
+            :root
+            :empty */
+
+            /* the before selector inserts something before the content of each selected elements */
+            h1::before{
+                content: "😍";
+                background-color:green;
+            }
+            /* the after selector inserts something after the content of each selected elements */
+            h1::after{
+                content: "😍"; 
+            }
+            body{
+                counter-reset:p;
+            }
+            p::before{
+                counter-increment: p;
+                content: counter(p) " ad";
+                background-color:red;
+            }
+
+            /* the first letter selector selects the first letter of every element it is used on */
+            p::first-letter{
+                color:brown;
+                font-size: 1.2em;
+            }
+
+            /*  the ::first-line selector selects the first line of every element it is used on */
+
+            /* the ::selection selector selects the portion of an element that is selected by a user */
+            h1::selection{
+                background-color: yellow;
+            }
+
+            /* Attribute selector allow you to create rules that apply to elements that have an attribute with a 
+            specific value */
+
+            /* all div that have a class */
+            div[class]{
+                background-color: hotpink;
+            }
+            span[title="abcd"]{
+                color: blue;
+            }
+            /* macthes a specific attribute whose value appears in a space separated list of words */
+            span[title~="dog"]{
+                color:yellow;
+            }
+
+            /* Prefix - macthes a specific attribute whose value begins with a specific string */
+            span[title^="l"]{
+                color:aquamarine;
+            }
+
+            /* substring -  matches a specific attribute whose value contains a specific substring */
+            /* targets any p element with an attribute whose value contains the letter "do" */
+            p[class*="do"]{
+                color: blue;
+            }
+
+            /* matches a specific attribute whose value ends with a specific string */
+            /* targets any p element with an class whose value ends with the letter "g" */
+            p[class$="g"]{
+                color:khaki;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "app">
+            <h1>Heading 1</h1>
+            <p id="this">Para 1</p>
+            <p>Para 2</p>
+            <div class="inner">
+                <h1>Inner Heading 1</h1>
+                <p>Inner Para 1</p>
+                <p>Inner Para 2</p>
+            </div>
+            <span title="abcd">hello world</span>
+        </div>
+        <span title="pomeranian dog">pomeranian</span>
+        <span title="lab">labrador</span>
+        <a href="#">Link 1</a>
+        <input type="submit" value="Submit">
+
+        <p class="ghdo">GHDO</p>
+        <p class="sdjfg">sdjfg</p>
+    </body>
+</html>
