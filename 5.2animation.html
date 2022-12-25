@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <style>
+            #app{
+                width:100px;
+                height:100px;
+                background-color:black;
+                animation-name:slide, grow;
+                animation-duration:2s, 1s;
+                animation-iteration-count:infinite;
+                /* animation-direction:reverse; */
+                animation-direction:alternate;
+                animation-timing-function:linear
+            }
+
+            @keyframes grow{
+                to{
+                    width:150px;
+                    height:150px;
+                }
+            }
+
+            @keyframes slide {
+                to{
+                    transform:translateY(300px);
+                }
+            }
+/* to == 100%; from == 0% */
+            @keyframes pulse{
+                0%{
+                    background-color:black;
+                }
+                100%{
+                    background-color:aqua;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Animation</h3>
+        <ul>
+            <li>The animation property in CSS can be used to animate many other CSS properties such as color, background color, height, or width</p>
+            <li>Each animation needs to be defined with the @keyframes at-rule which is then called with the animation property</li>
+        </ul>
+            <div id = "app">
+            
+        </div>
+
+        <div id = "app2">
+            
+        </div>
+        
+    </body>
+</html>

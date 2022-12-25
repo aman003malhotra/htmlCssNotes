@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox</title>
+        <meta charset="UTF-8" />
+        <style>
+            #app{
+                display:flex;
+                flex-direction:row; 
+                /* row | row-reverse | column | column-reverse */
+                flex-wrap:wrap; 
+                /* wrap | nowrap | wrap-reverse */
+            }
+
+            #app > div{
+                width:100px;
+                height:100px;
+                margin:10px;
+                background-color: lightcoral;
+            }
+
+            .app2{
+                display:flex;
+                flex-direction:row;
+                justify-content: center;
+                /* center | flex-start | flex-end | space-between | space-evenly | space-around */
+                align-items:center;
+                /* center | flex-start | flex-end | stretch | baseline */
+                /* stretch won't work if height of the child element is already defined */
+
+                /* align-content:flex-start | flex-end | center | space-between | space-around | stretch */
+            }
+            .app2 > div{
+                width:100px;
+                height:100px;
+                margin:10px;
+                background-color: lightcoral;
+            }
+
+            .app3{
+                display:flex;
+                flex-direction:row;
+            }
+            .app3 > div{
+                width:100px;
+                height:100px;
+                margin:10px;
+                background-color: lightcoral;
+            }
+
+            .app4{
+                display:flex;
+                flex-direction:row;
+            }
+            .app4 > div{
+                width:100px;
+                height:100px;
+                margin:10px;
+                background-color: lightcoral;
+                flex-shrink:0;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="example"></div>
+        <h3>flexbox</h3>
+        <p>The main axis is defined by flex-direction, which has four possible values: row, row-reverse, column, column-reverse</p>
+        
+        <h4>Flex-direction</h4>
+        <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container.FLexbox is (aside from optional wrapping) a single direction layout concept.</p>
+        
+        <h4>flex-wrap</h4>
+        <p>by default flex items will all try to fit onto one line. you can change that and allow the items to wrap as needed with this property</p>
+        
+        <h4>justify-content</h4>
+        <p>This defines the alignment along the main axis</p>
+
+        <h4>align-items</h4>
+        <p>this defines the default behaviour for how flex items are laid out along the cross axis on the current line</p>
+
+        <h4>align-content</h4>
+        <p>this align a flex container lines within when there is extra space in the cross-axis.Note:no effect when there is only one line of flex items</p>
+
+        <h4>order</h4>
+        <p>It sets the order to lay out an item in a flex or grid container.</p>
+        <p>Items in a container are sorted by ascending order value and then by their source code order</p>
+
+        <h4>Flex-grow</h4>e
+        <p>This property specifies how much of the remaining space in the flex container should be assigned to the item(the flex grow factor)</p>
+        
+        <h4>flex-shrink</h4>
+        <p>The flex shrink CSS property sets the flex-shrink factor of a flex item</p>
+        <p>if the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink</p>
+        
+        <h4>flex-basis</h4>
+        <p>it sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing</p>
+        
+        <h4>align-self</h4>
+        <p>the align-self CSS property overrides a grid or flex items align items value</p>
+        <p>in grid it aligns the items inside the grid area</p>
+        <p>in flexbox, it aligns the items on the cross axis</p>
+        <!-- auto | flex-start | flex-end | center | baseline | stretch -->
+
+
+        <div id="app">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div style="order:1">Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div style="order:2">Item 7</div>
+            <div>Item 8</div>
+            <div style="order:3">Item 9</div>
+            <div>Item 10</div>
+        </div>
+
+        <div class="app2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+
+        <div class="app3">
+            <div style="flex-grow:1">Item 1</div>
+            <div>Item 2</div>
+            <div style="flex-grow:1">Item 3</div>
+        </div>
+
+        <div class="app4">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>
+            <div>Item 11</div>
+            <div>Item 12</div>
+            <div>Item 13</div>
+            <div>Item 14</div>
+            <div>Item 15</div>
+            <div>Item 16</div>
+            <div>Item 17</div>
+            <div>Item 18</div>
+            <div>Item 19</div>
+            <div>Item 20</div>
+            <div>Item 21</div>
+            <div>Item 22</div>
+            <div>Item 23</div>
+            <div>Item 24</div>
+        </div>
+    </body>
+</html>

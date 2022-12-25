@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <style>
+            /* STATIC */
+            #example{
+                width:100px;
+                height:100px;
+                background-color:lightgreen;
+                /* top:100px; THIS WILL NOT WORK WITH No POSITION DEFINED AS DEFAULT POSITION IS STATIC */
+            }
+
+            /* RELATIVE */
+            #example2{
+                width:100px;
+                height:100px;
+                background-color:lightgreen;
+                position:relative;
+                top:10px;
+                left:30px;
+            }
+
+            .example{
+                width:100px;
+                height:100px;
+                background-color:lightgreen;
+                top:100px;
+                left:300px;
+                margin:20px;
+            }
+            /*  always relative to the browser window */
+            .fixed{
+                width:100px;
+                height:100px;
+                background-color:lightgreen;
+                top:150px;
+                left:350px;
+                margin:20px;
+                position:fixed
+            }
+            /* IT is relative to the nearest relative parent */
+            .abs{
+                position:absolute;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS Layouts</h1>
+        <h3>Normal Flow</h3>
+        <ul>
+            <li>Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout</li>
+        </ul>
+        
+        <h3>CSS Positioning</h3>
+        <ul>
+            <li>CSS helps you to position your HTML element. The position property can help you manipulate the location of an element</li>
+            <li><b>STATIC</b> - every element has a static position by default, so the element will stick to the noraml page flow, So if there is a left/right/top/bottom/z-index set then there will be no effect on that element</li>
+            <li><b>RELATIVE</b> - Relative positioning moves an element in relation to where it would have been in normal flow. For example you can move it by 10 pixels lower than it would have been in normal </li>
+            <li><b>ABSOLUTE</b> - when a position property is given a value of absolute, the box is taken out of normal flow and no longer affects the postion of other elements on the page(They act like it is not there).It is postioned relative to the nearest parent with the position relative</li>
+            <li><b>FIXED</b> - Fixed positioning is a type of absolute positioning that requires the position property to have a fixed value. It position the elements in reltation to the browser window therefore when you scroll down the page, it stays in the exact same place. it is a good ides to try this example in your browser to see the effect</li>
+            <li><b>STICKY</b> - Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A sticky positioned element is treated as relatively positioned until it crosses a specified threshold at which point it is treated as fixed until it reaches the boundary of its parent. </li>
+            
+        </ul>
+
+        <div id="example"></div>
+
+        <div id="example2"></div>
+
+        <div class="example">example class</div>
+        <div class="example abs">example abs class</div>
+
+        <div class="fixed">fixed class</div>
+
+
+        <div id = "app2">
+            
+        </div>
+        
+    </body>
+</html>
